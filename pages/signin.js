@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const router = useRouter();
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -22,6 +23,7 @@ function Signin() {
         password: password,
       });
       console.log("Login successful:", response.data);
+      router.push("/account");
       // You can handle further logic here such as redirecting the user
     } catch (error) {
       console.error("Login error:", error.response || error);

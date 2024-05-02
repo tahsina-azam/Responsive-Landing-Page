@@ -19,7 +19,11 @@ export default function Home() {
     <div>
       <WhiteNav />
       <BlackNav />
-      <DynamicHeroIntro imgUrl="figureAll.png" />
+      <DynamicHeroIntro
+        imgUrl="figureAll.png"
+        style="text-black md:font-bold text-3xl"
+        color="text-black"
+      />
       <HeroIntro
         imgUrl="figureIphoneMax.png"
         style="text-white  md:font-bold text-3xl"

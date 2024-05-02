@@ -1,21 +1,33 @@
 import React, { useState } from "react";
+import Nav from "../components/admin/Nav";
 
 function HeroForm() {
   const [heading, setHeading] = useState("");
   const [text, setText] = useState("");
-  const [buttonText, setButtonText] = useState("");
+  const [button_text, setButtonText] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Heading:", heading);
-    console.log("Text:", text);
-    console.log("Button Text:", buttonText);
-    // You can send this data to an API or update state in a parent component
+    try {
+      const response = await fetch("/api/hero", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ heading, text, button_text }),
+      });
+      const data = await response.json();
+      console.log("Update response:", data);
+      // Handle success or error response from backend
+    } catch (error) {
+      console.error("Error updating hero data:", error);
+      // Handle error
+    }
   };
 
   return (
     <div>
+      <Nav />
       <div className="max-w-lg mx-auto bg-white p-8 rounded shadow-md">
         <h1 className="text-2xl font-bold mb-4">Update Components</h1>
         <form onSubmit={handleSubmit}>
@@ -61,7 +73,7 @@ function HeroForm() {
               type="text"
               id="buttonText"
               name="buttonText"
-              value={buttonText}
+              value={button_text}
               onChange={(e) => setButtonText(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
               placeholder="Enter new button text..."
