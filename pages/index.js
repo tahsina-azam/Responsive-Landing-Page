@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import WhiteNav from "../components/WhiteNav";
-import BlackNav from "../components/BlackNav";
-import HeroIntro from "../components/HeroIntro";
-import SideBySide from "../components/SideBySide";
-import SideBySideRow2 from "../components/SideBySideRow2";
-import SideBySideRow3 from "../components/SideBySideRow3";
-import TabPanelCarousel from "../components/TabPanelCarousel";
-import TabList from "../components/TabList";
-import AdCarousel from "../components/AdCarousel";
-import Footer from "../components/Footer";
-import DynamicHeroIntro from "../components/DynamicHeroIntro";
+import WhiteNav from "../components/navbar/WhiteNav";
+import BlackNav from "../components/navbar/BlackNav";
+import HeroIntro from "../components/landing-body/HeroIntro";
+import SideBySide from "../components/landing-body/SideBySide";
+import SideBySideRow2 from "../components/landing-body/SideBySideRow2";
+import SideBySideRow3 from "../components/landing-body/SideBySideRow3";
+import TabPanelCarousel from "../components/carousel/TabPanelCarousel";
+import AdCarousel from "../components/carousel/AdCarousel";
+import Footer from "../components/footer/Footer";
+import DynamicHeroIntro from "../components/landing-body/DynamicHeroIntro";
+import CarouselIndicators from "../components/carousel/CarouselIndicators";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,8 +54,8 @@ export default function Home() {
         texts1="Get $180-$630 in credit when you"
         texts2="trade in iPhone 11 or higher.1"
       />
-      <TabPanelCarousel />
-      <TabList />
+      <TabPanelCarousel currentSlide={1} />
+      <CarouselIndicators numSlides={3} currentSlide={1} />
       <AdCarousel />
       <Footer />
     </div>
