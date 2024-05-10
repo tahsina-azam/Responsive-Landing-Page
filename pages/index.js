@@ -59,7 +59,7 @@ export default function Home() {
         texts2="trade in iPhone 11 or higher.1"
       />
       <TabPanelCarousel currentSlide={1} />
-      <CarouselIndicators numSlides={3} currentSlide={1} />
+      {/* <CarouselIndicators numSlides={3} currentSlide={1} /> */}
       <AdCarousel />
       <Footer />
     </div>

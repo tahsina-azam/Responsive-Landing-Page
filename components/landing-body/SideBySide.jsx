@@ -93,7 +93,7 @@ function SideBySide() {
           className="w-full h-[250px] bg-cover bg-center bg-no-repeat md:h-[550px] flex flex-col justify-end"
           style={{ backgroundImage: `url('${item2.img_url}')` }}
         >
-          <div className="text-center p-8 flex flex-col items-center">
+          <div className="text-center p-8  flex flex-col items-center">
             <div className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

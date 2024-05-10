@@ -8,7 +8,7 @@ function SideBySideRow3(props) {
           className="w-full h-[250px] bg-cover bg-center bg-no-repeat md:h-[550px]"
           style={{ backgroundImage: "url('figureCard.png')" }}
         >
-          <div className="text-center p-8">
+          <div className="text-center md:p-8 sm:p-2">
             <div className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ function SideBySideRow3(props) {
           className="w-full h-[250px] bg-cover bg-center bg-no-repeat md:h-[550px]"
           style={{ backgroundImage: "url('figureMobiles.png')" }}
         >
-          <div className="text-center p-8">
+          <div className="text-center md:p-8 sm:p-2">
             <div className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

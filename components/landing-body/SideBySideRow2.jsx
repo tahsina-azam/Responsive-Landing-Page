@@ -8,7 +8,7 @@ function SideBySideRow2(props) {
           className="w-full h-[250px] bg-cover bg-center bg-no-repeat md:h-[550px]"
           style={{ backgroundImage: "url('figureLaptop.png')" }}
         >
-          <div className="text-center p-8">
+          <div className="text-center md:p-8 sm:p-2">
             <h1 className={props.style}>{props.heading}</h1>
             <p className={props.color}>{props.text}</p>
             <button class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4 mr-2">
@@ -23,7 +23,7 @@ function SideBySideRow2(props) {
           className="w-full h-[250px] bg-cover bg-center bg-no-repeat md:h-[550px]"
           style={{ backgroundImage: "url('figureWatch.png')" }}
         >
-          <div className="text-center p-8">
+          <div className="text-center md:p-8 sm:p-2">
             <div className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
